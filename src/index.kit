@@ -1,23 +1,79 @@
 <!-- @import "head" -->
-
 <body>
-    <!--@import "header" -->
-    <main>
-        <h1>Esta é a homepage</h1>
+<!-- @import "header" -->
 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make
-            a type specimen book.</p>
+<main>
 
-        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages,
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-    </main>
-    <!-- @import "footer" -->
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">DESIGN RESOURCES</span>
+            <h1>Stop searching.<br>Start shipping.</h1>
+            <p>Battle-tested hacks, walkthroughs, and cheat sheets for designers who move fast.</p>
+            <div class="hero-ctas">
+                <a href="/sobre.html" class="btn btn-dark">Explore The Vault →</a>
+                <a href="#this-weeks-best" class="btn btn-outline">See What's Inside ↓</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- Floating cards — add images or CSS cards here -->
+        </div>
+    </section>
+
+    <!-- THIS WEEK'S BEST -->
+    <section class="this-weeks-best" id="this-weeks-best">
+        <h2>This Week's Best</h2>
+        <div class="cards-row">
+            <article class="card">
+                <span class="tag tag-yellow">QUICK WIN</span>
+                <h3>Auto Layout Shortcuts That Save 20 Min/Day</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+            <article class="card">
+                <span class="tag tag-red">DEEP DIVE</span>
+                <h3>Responsive Card Components in 8 Steps</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+            <article class="card">
+                <span class="tag tag-purple">CHEAT SHEET</span>
+                <h3>WCAG Accessibility Checklist for UI Designers</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+            <article class="card">
+                <span class="tag tag-yellow">QUICK WIN</span>
+                <h3>Perfecting Button States and Micro-interactions</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- EXPLORE THE LIBRARY -->
+    <section class="explore-library">
+        <h2>Explore the Library</h2>
+        <div class="category-grid">
+            <div class="category-card category-yellow">
+                <span class="icon">⚡</span>
+                <h3>Quick Wins</h3>
+                <p>5-minute fixes to elevate your UI instantly.</p>
+                <a href="#" class="btn btn-dark">Browse Category</a>
+            </div>
+            <div class="category-card category-dark">
+                <span class="icon">▦</span>
+                <h3>Deep Dives</h3>
+                <p>Comprehensive studies on UX patterns and psychology.</p>
+                <a href="#" class="btn btn-outline-light">Browse Category</a>
+            </div>
+            <div class="category-card category-purple">
+                <span class="icon">⊞</span>
+                <h3>Cheat Sheets</h3>
+                <p>Downloadable PDF guides for quick reference.</p>
+                <a href="#" class="btn btn-dark">Browse Category</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- @import "footer" -->
 </body>
-
 </html>

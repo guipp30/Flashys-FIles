@@ -1,51 +1,119 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-GB">
 <head>
-    <title>Título do meu site</title>
-    <link rel="stylesheet" href="../../../assets/css/styles.min.css">
-</head>
-<body>
-<header>
-    <h1>O meu site</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashy's Files</title>
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head><body>
+<header class="site-header">
 <nav>
+    <a href="/" class="logo">Flashy's Files <span class="dot">✦</span></a>
     <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/sobre.html">Sobre</a></li>
-        <li><a href="/contato.html">Contato</a></li>
+        <li><a href="/about.html">Articles</a></li>
+        <li><a href="/articles.html">Deep Dive</a></li>
+        <li><a href="/contact.html">Connect</a></li>
     </ul>
-</nav></header>    <main>
-        <h1>Esta é a homepage</h1>
+    <a href="#" class="btn-nav">Register/Login</a>
+</nav></header>
+<main>
 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make
-            a type specimen book.</p>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">DESIGN RESOURCES</span>
+            <h1>Stop searching.<br>Start shipping.</h1>
+            <p>Battle-tested hacks, walkthroughs, and cheat sheets for designers who move fast.</p>
+            <div class="hero-ctas">
+                <a href="/sobre.html" class="btn btn-dark">Explore The Vault →</a>
+                <a href="#this-weeks-best" class="btn btn-outline">See What's Inside ↓</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- Floating cards — add images or CSS cards here -->
+        </div>
+    </section>
 
-        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages,
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-    </main>
-<footer>
-        <p>&copy; 2023 O meu site. Todos os direitos reservados.</p>
-        <div class="social-links">
-            <h2>Siga-nos:</h2>
+    <!-- THIS WEEK'S BEST -->
+    <section class="this-weeks-best" id="this-weeks-best">
+        <h2>This Week's Best</h2>
+        <div class="cards-row">
+            <article class="card">
+                <span class="tag tag-yellow">QUICK WIN</span>
+                <h3>Auto Layout Shortcuts That Save 20 Min/Day</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+            <article class="card">
+                <span class="tag tag-red">DEEP DIVE</span>
+                <h3>Responsive Card Components in 8 Steps</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+            <article class="card">
+                <span class="tag tag-purple">CHEAT SHEET</span>
+                <h3>WCAG Accessibility Checklist for UI Designers</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+            <article class="card">
+                <span class="tag tag-yellow">QUICK WIN</span>
+                <h3>Perfecting Button States and Micro-interactions</h3>
+                <a href="/artigo.html">Read Post →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- EXPLORE THE LIBRARY -->
+    <section class="explore-library">
+        <h2>Explore the Library</h2>
+        <div class="category-grid">
+            <div class="category-card category-yellow">
+                <span class="icon">⚡</span>
+                <h3>Quick Wins</h3>
+                <p>5-minute fixes to elevate your UI instantly.</p>
+                <a href="#" class="btn btn-dark">Browse Category</a>
+            </div>
+            <div class="category-card category-dark">
+                <span class="icon">▦</span>
+                <h3>Deep Dives</h3>
+                <p>Comprehensive studies on UX patterns and psychology.</p>
+                <a href="#" class="btn btn-outline-light">Browse Category</a>
+            </div>
+            <div class="category-card category-purple">
+                <span class="icon">⊞</span>
+                <h3>Cheat Sheets</h3>
+                <p>Downloadable PDF guides for quick reference.</p>
+                <a href="#" class="btn btn-dark">Browse Category</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <p class="footer-logo">Flashy's Files</p>
+            <p class="footer-tagline">The designer's unfair advantage.</p>
+        </div>
+        <div class="footer-nav">
+            <p class="footer-heading">NAVIGATION</p>
             <ul>
-                <li><a href="https://www.facebook.com">Facebook</a></li>
-                <li><a href="https://www.instagram.com">Instagram</a></li>
-                <li><a href="https://www.twitter.com">Twitter</a></li>
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">The Vault</a></li>
+                <li><a href="/articles.html">Deep Dive</a></li>
+                <li><a href="/contact.html">Connect</a></li>
             </ul>
         </div>
-        <h2>Links úteis:</h2>
-        <ul>
-            <li><a href="/privacidade">Política de Privacidade</a></li>
-            <li><a href="/termos">Termos de Uso</a></li>
-        </ul>
-    </footer>
-    <script src="assets/js/app.min.js"></script></body>
-
+        <div class="footer-connect">
+            <p class="footer-heading">CONNECT</p>
+            <div class="social-icons">
+                <a href="#">Twitter/X</a>
+                <a href="#">Instagram</a>
+                <a href="#">Dribbble</a>
+            </div>
+        </div>
+    </div>
+    <p class="footer-copy">© 2026 Flashy's Files. Built for builders.</p>
+</footer>
+<script src="assets/js/app.min.js"></script></body>
 </html>
