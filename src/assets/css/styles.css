@@ -195,7 +195,7 @@
    Applied automatically when OS/browser prefers dark mode,
    or explicitly via [data-theme="dark"] on any ancestor.
 ============================================================ */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     /* Violets (inverted scale for dark surfaces) */
     --color-violet-0:    #211E29;
