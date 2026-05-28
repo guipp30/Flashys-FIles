@@ -1,4 +1,308 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* ============================================================
+   Design Tokens — CSS Custom Properties
+   Source: Figma token files (Desktop · Mode 1 · Light · Dark)
+
+   Unit rationale
+   ─────────────────────────────────────────────────────────────
+   rem           → spacing, icon sizes, font sizes, line-heights
+                   (scales with the user's browser font preference)
+   px            → border-radius
+                   (fixed visual shape, doesn't need to scale)
+   em            → letter-spacing
+                   (proportional to the element's own font size)
+   unitless      → font-weight, grid column counts
+   hex           → colors
+   ============================================================ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     ICONS
+     Source: primitive.sizes.icons  (Desktop.tokens.json)
+     Unit: rem — icon sizes that scale with the root font size
+  ---------------------------------------------------------- */
+  --icon-width-sm:  1rem;       /*  16px */
+  --icon-width-md:  2rem;       /*  32px */
+  --icon-width-lg:  4rem;       /*  64px */
+  --icon-width-xl:  8rem;       /* 128px */
+
+  --icon-height-sm: 1rem;       /*  16px */
+  --icon-height-md: 2rem;       /*  32px */
+  --icon-height-lg: 4rem;       /*  64px */
+  --icon-height-xl: 8rem;       /* 128px */
+
+
+  /* ----------------------------------------------------------
+     GRID
+     Source: primitive.sizes.grid  (Desktop.tokens.json)
+     Gutters & margins → rem  |  Column counts → unitless
+  ---------------------------------------------------------- */
+  --grid-gutter:          1rem;   /*  16px */
+
+  --grid-margin-100:      1rem;   /*  16px */
+  --grid-margin-200:      2rem;   /*  32px */
+  --grid-margin-300:      4rem;   /*  64px */
+
+  --grid-columns-mobile:   4;     /* unitless — column count */
+  --grid-columns-tablet:   8;
+  --grid-columns-desktop: 12;
+
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+     Source: primitive.sizes.radius  (Desktop.tokens.json)
+     Unit: px — fixed visual corner shape
+  ---------------------------------------------------------- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill: 9999px;
+
+
+  /* ----------------------------------------------------------
+     SPACING
+     Source: primitive.sizes.spacing  (Desktop.tokens.json)
+     Unit: rem — scales with user font preferences (accessibility)
+     Base: 1rem = 16px
+  ---------------------------------------------------------- */
+  --spacing-0:   0;
+  --spacing-2:   0.125rem;   /*   2px */
+  --spacing-4:   0.25rem;    /*   4px */
+  --spacing-8:   0.5rem;     /*   8px */
+  --spacing-12:  0.75rem;    /*  12px */
+  --spacing-16:  1rem;       /*  16px */
+  --spacing-20:  1.25rem;    /*  20px */
+  --spacing-24:  1.5rem;     /*  24px */
+  --spacing-32:  2rem;       /*  32px */
+  --spacing-40:  2.5rem;     /*  40px */
+  --spacing-48:  3rem;       /*  48px */
+  --spacing-64:  4rem;       /*  64px */
+  --spacing-80:  5rem;       /*  80px */
+  --spacing-128: 8rem;       /* 128px */
+
+
+  /* ----------------------------------------------------------
+     FONT FAMILY
+     Source: primitive.font.font-family  (Mode 1.tokens.json)
+  ---------------------------------------------------------- */
+  --font-serif: 'Instrument Serif', serif;
+  --font-sans:  'DM Sans', sans-serif;
+
+
+  /* ----------------------------------------------------------
+     FONT WEIGHT
+     Source: primitive.font.font-weight  (Mode 1.tokens.json)
+     Unit: unitless numeric values
+  ---------------------------------------------------------- */
+  --font-weight-light:    300;
+  --font-weight-regular:  400;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+
+  /* ----------------------------------------------------------
+     FONT SIZE
+     Source: primitive.font.font-size  (Mode 1.tokens.json)
+     Unit: rem — critical for accessibility and user scaling
+     Base: 1rem = 16px
+  ---------------------------------------------------------- */
+  --font-size-100: 0.75rem;    /*  12px */
+  --font-size-200: 1rem;       /*  16px */
+  --font-size-300: 1.25rem;    /*  20px */
+  --font-size-400: 1.5rem;     /*  24px */
+  --font-size-500: 2.5rem;     /*  40px */
+  --font-size-600: 4rem;       /*  64px */
+
+
+  /* ----------------------------------------------------------
+     LINE HEIGHT
+     Source: primitive.font.line-height  (Mode 1.tokens.json)
+     Unit: rem — keeps line-height consistent across font sizes
+     Base: 1rem = 16px
+  ---------------------------------------------------------- */
+  --line-height-100: 0.75rem;   /*  12px */
+  --line-height-200: 1rem;      /*  16px */
+  --line-height-300: 1.25rem;   /*  20px */
+  --line-height-400: 1.5rem;    /*  24px */
+  --line-height-500: 1.75rem;   /*  28px */
+  --line-height-600: 2rem;      /*  32px */
+  --line-height-700: 3rem;      /*  48px */
+  --line-height-800: 4.5rem;    /*  72px */
+
+
+  /* ----------------------------------------------------------
+     LETTER SPACING
+     Source: primitive.font.letter-spacing  (Mode 1.tokens.json)
+     Unit: em — proportional to each element's own font size
+     Conversion: Xpx ÷ 16px = Xem  (at 1rem base)
+  ---------------------------------------------------------- */
+  --letter-spacing-100: 0.0625em;    /*  1px at 16px */
+  --letter-spacing-200: 0.125em;     /*  2px at 16px */
+  --letter-spacing-300: 0.1875em;    /*  3px at 16px */
+  --letter-spacing-400: 0.25em;      /*  4px at 16px */
+  --letter-spacing-500: 0.3125em;    /*  5px at 16px */
+
+
+  /* ----------------------------------------------------------
+     COLORS — Light Mode (default)
+     Source: Light.tokens.json
+  ---------------------------------------------------------- */
+
+  /* Violets (light → dark) */
+  --color-violet-0:    #FCFCFD;
+  --color-violet-100:  #F5F2FF;
+  --color-violet-200:  #EBE5FF;
+  --color-violet-300:  #E1D7FF;
+  --color-violet-400:  #D7CAFF;
+  --color-violet-500:  #CDBDFF;
+  --color-violet-600:  #A497CC;
+  --color-violet-700:  #7B7199;
+  --color-violet-800:  #524C66;
+  --color-violet-900:  #292633;
+  --color-violet-1000: #211E29;
+
+  /* Oranges */
+  --color-orange-100: #FFDED8;
+  --color-orange-200: #FFBDB0;
+  --color-orange-300: #FF9D89;
+  --color-orange-400: #FF7C61;
+  --color-orange-500: #FF5B3A;
+  --color-orange-600: #CC492E;
+  --color-orange-700: #993723;
+  --color-orange-800: #662417;
+  --color-orange-900: #33120C;
+
+  /* Lime Green */
+  --color-lime-100: #F9FFCC;
+  --color-lime-200: #F2FF99;
+  --color-lime-300: #ECFE66;
+  --color-lime-400: #E5FE33;
+  --color-lime-500: #DFFE00;
+  --color-lime-600: #B2CB00;
+  --color-lime-700: #869800;
+  --color-lime-800: #596600;
+  --color-lime-900: #2D3300;
+
+}
+
+
+/* ============================================================
+   COLORS — Dark Mode
+   Source: Dark.tokens.json
+   Applied automatically when OS/browser prefers dark mode,
+   or explicitly via [data-theme="dark"] on any ancestor.
+============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Violets (inverted scale for dark surfaces) */
+    --color-violet-0:    #211E29;
+    --color-violet-100:  #292633;
+    --color-violet-200:  #524C66;
+    --color-violet-300:  #7B7199;
+    --color-violet-400:  #A497CC;
+    --color-violet-500:  #CDBDFF;
+    --color-violet-600:  #D7CAFF;
+    --color-violet-700:  #E1D7FF;
+    --color-violet-800:  #EBE5FF;
+    --color-violet-900:  #F5F2FF;
+    --color-violet-1000: #FCFCFD;
+
+    /* Oranges (inverted) */
+    --color-orange-100: #33120C;
+    --color-orange-200: #662417;
+    --color-orange-300: #993723;
+    --color-orange-400: #CC492E;
+    --color-orange-500: #FF5B3A;
+    --color-orange-600: #FF7C61;
+    --color-orange-700: #FF7C61;
+    --color-orange-800: #FFBDB0;
+    --color-orange-900: #FFDED8;
+
+    /* Lime Green (inverted) */
+    --color-lime-100: #2D3300;
+    --color-lime-200: #596600;
+    --color-lime-300: #869800;
+    --color-lime-400: #B2CB00;
+    --color-lime-500: #B2CB00;
+    --color-lime-600: #E5FE33;
+    --color-lime-700: #ECFE66;
+    --color-lime-800: #F2FF99;
+    --color-lime-900: #F9FFCC;
+  }
+}
+
+/* Optional explicit override for programmatic theme switching */
+[data-theme="dark"] {
+  --color-violet-0:    #211E29;
+  --color-violet-100:  #292633;
+  --color-violet-200:  #524C66;
+  --color-violet-300:  #7B7199;
+  --color-violet-400:  #A497CC;
+  --color-violet-500:  #CDBDFF;
+  --color-violet-600:  #D7CAFF;
+  --color-violet-700:  #E1D7FF;
+  --color-violet-800:  #EBE5FF;
+  --color-violet-900:  #F5F2FF;
+  --color-violet-1000: #FCFCFD;
+
+  --color-orange-100: #33120C;
+  --color-orange-200: #662417;
+  --color-orange-300: #993723;
+  --color-orange-400: #CC492E;
+  --color-orange-500: #FF5B3A;
+  --color-orange-600: #FF7C61;
+  --color-orange-700: #FF7C61;
+  --color-orange-800: #FFBDB0;
+  --color-orange-900: #FFDED8;
+
+  --color-lime-100: #2D3300;
+  --color-lime-200: #596600;
+  --color-lime-300: #869800;
+  --color-lime-400: #B2CB00;
+  --color-lime-500: #B2CB00;
+  --color-lime-600: #E5FE33;
+  --color-lime-700: #ECFE66;
+  --color-lime-800: #F2FF99;
+  --color-lime-900: #F9FFCC;
+}
+
+[data-theme="light"] {
+  --color-violet-0:    #FCFCFD;
+  --color-violet-100:  #F5F2FF;
+  --color-violet-200:  #EBE5FF;
+  --color-violet-300:  #E1D7FF;
+  --color-violet-400:  #D7CAFF;
+  --color-violet-500:  #CDBDFF;
+  --color-violet-600:  #A497CC;
+  --color-violet-700:  #7B7199;
+  --color-violet-800:  #524C66;
+  --color-violet-900:  #292633;
+  --color-violet-1000: #211E29;
+
+  --color-orange-100: #FFDED8;
+  --color-orange-200: #FFBDB0;
+  --color-orange-300: #FF9D89;
+  --color-orange-400: #FF7C61;
+  --color-orange-500: #FF5B3A;
+  --color-orange-600: #CC492E;
+  --color-orange-700: #993723;
+  --color-orange-800: #662417;
+  --color-orange-900: #33120C;
+
+  --color-lime-100: #F9FFCC;
+  --color-lime-200: #F2FF99;
+  --color-lime-300: #ECFE66;
+  --color-lime-400: #E5FE33;
+  --color-lime-500: #DFFE00;
+  --color-lime-600: #B2CB00;
+  --color-lime-700: #869800;
+  --color-lime-800: #596600;
+  --color-lime-900: #2D3300;
+}
+
 * {
     margin: 0;
     padding: 0;
