@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashy's Files</title>
     <link rel="stylesheet" href="assets/css/styles.min.css">
-</head><body>
+</head>  <body>
 <header class="site-header">
 <nav class="site-nav">
   <a href="/" class="nav-logo">
@@ -50,71 +50,122 @@
 </nav>
 </header>
 
-<main>
+    <main class="article-page">
+      <!-- BREADCRUMB -->
+      <div class="breadcrumb">
+        <span class="tag tag-red">DEEP DIVE</span>
+        <span>12 MIN READ</span>
+      </div>
 
-    <!-- HERO + FORM ROW -->
-    <section class="connect-hero">
-        <div class="connect-left">
-            <span class="star">★</span>
-            <h1>Let's build this together.</h1>
-            <p>Submit a tip, collaborate, or just say hey. We read every message and manually review all community submissions.</p>
-            <ul class="social-list">
-                <li><a href="#">Twitter / X →</a></li>
-                <li><a href="#">Instagram →</a></li>
-                <li><a href="#">Dribbble →</a></li>
-                <li><a href="#">Email →</a></li>
-            </ul>
+      <!-- ARTICLE TITLE + AUTHOR -->
+      <h1>Building a Design Token System from Scratch</h1>
+      <div class="article-author">
+        <img src="../assets/img/author.jpg" alt="Flashy" class="avatar" />
+        <div>
+          <p><strong>By Flashy</strong></p>
+          <p>Published April 15, 2026</p>
         </div>
-        <div class="connect-right">
-            <div class="form-card">
-                <h2>Suggest a Tip</h2>
-                <p>Your hack could save thousands of hours.</p>
-                <form>
-                    <label>Your Name</label>
-                    <input type="text" placeholder="Jane Doe">
+      </div>
 
-                    <label>Email Address</label>
-                    <input type="email" placeholder="jane@studio.co">
+      <!-- TWO-COLUMN LAYOUT -->
+      <div class="article-layout">
+        <!-- MAIN CONTENT COLUMN -->
+        <article class="article-content">
+          <blockquote class="intro-quote">
+            Design tokens are the atomic elements of your product's visual
+            identity. Here is the step-by-step framework to transition from
+            hard-coded hex values to a bulletproof token architecture that
+            engineers will actually love using.
+          </blockquote>
 
-                    <label>Category</label>
-                    <input type="text">
+          <h2>1. Naming Conventions</h2>
+          <p>
+            The biggest mistake teams make is jumping straight into semantic
+            tokens without defining the global scale first. Start with a neutral
+            palette and establish a clear naming framework. We recommend the
+            Category-Property-Concept-State format.
+          </p>
 
-                    <label>Describe your tip</label>
-                    <textarea placeholder="I use a keyboard shortcut to instantly wrap layers in an auto-layout frame, then fit..."></textarea>
+          <pre><code>/* Global tokens */
+--color-blue-lower: #1B4B8;
+--global-color-blue-800: #282948;
+/* ... */</code></pre>
 
-                    <button type="submit" class="btn btn-dark btn-full">Send It →</button>
-                    <p class="form-note">We review every submission. No spam, ever.</p>
-                </form>
-            </div>
-        </div>
-    </section>
+          <h2>2. Structuring the Figma File</h2>
+          <p>
+            Keep your tokens isolated from your component library. Create a
+            dedicated 'Foundations' file that publishes exclusively styles and
+            variables.
+          </p>
 
-    <!-- THE CURATORS -->
-    <section class="curators">
-        <h2>The Curators</h2>
-        <div class="curators-grid">
-            <div class="curator-card">
-                <img src="assets/img/curator-flashy.jpg" alt="Flashy" class="avatar">
-                <h3>Flashy</h3>
-                <p class="curator-role curator-red">FOUNDER &amp; EDITOR</p>
-                <p>Obsessed with micro-interactions and typographic scales. Spends too much time in the right-hand panel.</p>
-            </div>
-            <div class="curator-card">
-                <img src="assets/img/curator-sarah.jpg" alt="Sarah" class="avatar">
-                <h3>Sarah</h3>
-                <p class="curator-role curator-yellow">DESIGN ENGINEER</p>
-                <p>Translating static pixels into responsive, accessible code. The bridge between Figma and reality.</p>
-            </div>
-            <div class="curator-card">
-                <img src="assets/img/curator-marcus.jpg" alt="Marcus" class="avatar">
-                <h3>Marcus</h3>
-                <p class="curator-role curator-purple">SYSTEM ARCHITECT</p>
-                <p>Builds the tokens, structures the libraries, and writes the documentation no one else wants to write.</p>
-            </div>
-        </div>
-    </section>
+          <div class="video-embed">
+            <img src="../assets/img/video-thumb.jpg" alt="Video thumbnail" />
+          </div>
 
-</main>
+          <h2>3. Handling Dark Mode</h2>
+          <p>
+            Dark mode should never require duplicating components. By mapping
+            light and dark themes to the same semantic token names, the switch
+            happens automatically at the variable level.
+          </p>
+
+          <blockquote class="pull-quote">
+            "A token system isn't finished when it works in Figma. It's finished
+            when a developer can build a new feature without ever sampling a
+            color."
+          </blockquote>
+
+          <p>
+            Take the time to align your variable collections with your
+            codebase's theme provider. The initial setup takes hours, but it
+            saves weeks of back-and-forth pixel pushing.
+          </p>
+
+          <div class="article-tags">
+            <span>Figma</span>
+            <span>PostScript</span>
+            <span>Fonction</span>
+            <span>InDesign Admin</span>
+          </div>
+
+          <!-- CTA BANNER -->
+          <div class="article-cta">
+            <h3>Found this useful?</h3>
+            <p>Got a workflow hack of your own? Share it with the community.</p>
+            <a href="../contact.html" class="btn btn-light">SUGGEST A TIP →</a>
+          </div>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="article-sidebar">
+          <div class="sidebar-widget">
+            <h4>Article Guide</h4>
+            <p class="sidebar-label">Quick Navigation</p>
+            <nav class="toc">
+              <a href="#" class="toc-active">Table of Contents</a>
+              <a href="#">Pro Tips</a>
+              <a href="#">Resources</a>
+              <a href="#">Share</a>
+            </nav>
+          </div>
+          <div class="sidebar-widget sidebar-tip">
+            <span>💡 Pro Tip</span>
+            <p>
+              Never use the 'to-grid' inside components. Never let it do the
+              macro layout to avoid a cluttered 'Spreadsheets' look.
+            </p>
+          </div>
+          <div class="sidebar-widget">
+            <p class="sidebar-label">Related Resources</p>
+            <a href="#">The 12 Font Pairings That Always Work</a><br />
+            <a href="#">Read Here →</a>
+            <a href="#">Auto Layout Shortcuts That Save 30 Min/Day</a><br />
+            <a href="#">Read More →</a>
+          </div>
+        </aside>
+      </div>
+      <!-- end .article-layout -->
+    </main>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -247,5 +298,5 @@
   <p class="footer-copy">© 2026 Flashy's Files. Built for builders.</p>
 </footer>
 <script src="assets/js/app.min.js"></script>
-</body>
+  </body>
 </html>

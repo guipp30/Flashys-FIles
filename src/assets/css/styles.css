@@ -374,3 +374,82 @@
 .btn-nav:hover {
   opacity: 0.85;
 }
+
+/* ── Body ───────────────────────────────────────────────── */
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #fafafa;
+  color: #0d0d0d;
+}
+
+/* ── Shared utilities ───────────────────────────────────── */
+
+/* Tag badges */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag-yellow {
+  background-color: #dffe00;
+  color: #0d0d0d;
+}
+
+.tag-red {
+  background-color: #ff5b3a;
+  color: #fff;
+}
+
+.tag-purple {
+  background-color: #cdbdff;
+  color: #4b3d7a;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 32px;
+  border-radius: var(--radius-pill);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-dark {
+  background-color: #0d0d0d;
+  color: #fafafa;
+  border-color: #0d0d0d;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #0d0d0d;
+  border-color: #0d0d0d;
+}
+
+.btn-light {
+  background-color: #fafafa;
+  color: #0d0d0d;
+  border-color: #fafafa;
+}
