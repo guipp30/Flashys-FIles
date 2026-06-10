@@ -7,17 +7,17 @@
     <main class="article-page">
       <!-- BREADCRUMB -->
       <div class="breadcrumb">
-        <span class="tag tag-red">DEEP DIVE</span>
-        <span>12 MIN READ</span>
+        <span class="tag tag-red-light">DEEP DIVE</span>
+        <span class="read-time-badge">12 MIN READ</span>
       </div>
 
       <!-- ARTICLE TITLE + AUTHOR -->
       <h1>Building a Design Token System from Scratch</h1>
       <div class="article-author">
-        <img src="../assets/img/author.jpg" alt="Flashy" class="avatar" />
-        <div>
-          <p><strong>By Flashy</strong></p>
-          <p>Published April 15, 2026</p>
+        <img src="../assets/img/gui.avif" alt="Flashy" class="avatar" />
+        <div class="article-author-info">
+          <p class="author-name">By Guilherme</p>
+          <p class="author-date">Published April 16, 2026</p>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
             engineers will actually love using.
           </blockquote>
 
-          <h2>1. Naming Conventions</h2>
+          <h2 id="1-namingConventions">1. Naming Conventions</h2>
           <p>
             The biggest mistake teams make is jumping straight into semantic
             tokens without defining the global scale first. Start with a neutral
@@ -40,12 +40,18 @@
             Category-Property-Concept-State format.
           </p>
 
-          <pre><code>/* Global tokens */
---color-blue-lower: #1B4B8;
---global-color-blue-800: #282948;
-/* ... */</code></pre>
+          <pre class="code-block"><code>tokens.css
 
-          <h2>2. Structuring the Figma File</h2>
+
+/* ❌ Bad: Too specific, hard to scale */
+--color-button-blue-hover: #1D4ED8;
+/* ✅ Good: Global →> Semantic */
+--global-color-blue-500: #3B82F6;
+--global-color-blue-600: #2563EB;
+--semantic-color-primary-default: var(--global-color-blue-500);
+--semantic-color-primary-hover: var(--global-color-blue-600);</code></pre>
+
+          <h2 id="2-structuringTheFigmaFile">2. Structuring the Figma File</h2>
           <p>
             Keep your tokens isolated from your component library. Create a
             dedicated 'Foundations' file that publishes exclusively styles and
@@ -56,7 +62,7 @@
             <img src="../assets/img/video-thumb.jpg" alt="Video thumbnail" />
           </div>
 
-          <h2>3. Handling Dark Mode</h2>
+          <h2 id="3-handlingDarkMode">3. Handling Dark Mode</h2>
           <p>
             Dark mode should never require duplicating components. By mapping
             light and dark themes to the same semantic token names, the switch
@@ -92,29 +98,49 @@
 
         <!-- SIDEBAR -->
         <aside class="article-sidebar">
+          <!-- TOC Widget -->
           <div class="sidebar-widget">
-            <h4>Article Guide</h4>
+            <h4 class="sidebar-title">Article Guide</h4>
             <p class="sidebar-label">Quick Navigation</p>
             <nav class="toc">
-              <a href="#" class="toc-active">Table of Contents</a>
-              <a href="#">Pro Tips</a>
-              <a href="#">Resources</a>
-              <a href="#">Share</a>
+              <a href="#1-namingConventions" class="toc-active"
+                >Naming Conventions</a
+              >
+              <a href="#2-structuringTheFigmaFile" class="toc-link"
+                >Structuring the Figma File</a
+              >
+              <a href="#3-handlingDarkMode" class="toc-link"
+                >Handling Dark Mode</a
+              >
             </nav>
           </div>
-          <div class="sidebar-widget sidebar-tip">
-            <span>💡 Pro Tip</span>
+
+          <!-- Pro Tip Callout -->
+          <div class="sidebar-tip">
+            <div class="sidebar-tip-label">
+              <span>PRO TIP</span>
+            </div>
             <p>
-              Never use the 'to-grid' inside components. Never let it do the
-              macro layout to avoid a cluttered 'Spreadsheets' look.
+              Never use the 1px grid inside components. Reserve it strictly for
+              the macro layout to avoid a cluttered "spreadsheet" look.
             </p>
           </div>
-          <div class="sidebar-widget">
-            <p class="sidebar-label">Related Resources</p>
-            <a href="#">The 12 Font Pairings That Always Work</a><br />
-            <a href="#">Read Here →</a>
-            <a href="#">Auto Layout Shortcuts That Save 30 Min/Day</a><br />
-            <a href="#">Read More →</a>
+
+          <!-- Related Resources -->
+          <div class="sidebar-related">
+            <p class="sidebar-label sidebar-label--spaced">RELATED RESOURCES</p>
+            <a href="../articles/12-Font-Pairings.html" class="related-card">
+              <p class="related-card-title">
+                The 12 Font Pairings That Always Work
+              </p>
+              <span class="related-card-link">Read More →</span>
+            </a>
+            <a href="#" class="related-card">
+              <p class="related-card-title">
+                Auto Layout Shortcuts That Save 20 Min/Day
+              </p>
+              <span class="related-card-link">Read More →</span>
+            </a>
           </div>
         </aside>
       </div>
