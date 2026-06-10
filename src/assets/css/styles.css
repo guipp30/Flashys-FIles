@@ -382,6 +382,11 @@ body {
   color: #0d0d0d;
 }
 
+.hero-image img {
+  width: 400px;
+  height: auto;
+}
+
 /* ── Shared utilities ───────────────────────────────────── */
 
 /* Tag badges */
