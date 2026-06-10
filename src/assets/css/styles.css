@@ -734,3 +734,129 @@ body {
 .card-link:hover {
   opacity: 0.7;
 }
+
+/* ── Explore the Library ────────────────────────────────── */
+.explore-library {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+  padding: 44px var(--spacing-48) 18px;
+  background-color: #fafafa;
+}
+
+.explore-library h2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 3rem;
+  line-height: var(--line-height-700);
+  color: #0d0d0d;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-32);
+}
+
+/* Base category card */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  padding: var(--spacing-32);
+  border-radius: 14px;
+}
+
+.category-card .card-icon-lg {
+  width: var(--icon-width-md); /* 32px */
+  height: var(--icon-height-md);
+  flex-shrink: 0;
+}
+
+.category-card h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.25rem;
+  line-height: var(--font-size-500); /* 40px */
+  margin: var(--spacing-8) 0 0;
+}
+
+.category-card p {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-200);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-400);
+  margin: var(--spacing-8) 0 0;
+}
+
+.category-card .btn-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-32);
+  padding: var(--spacing-8) var(--spacing-24);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-regular);
+  font-size: 0.875rem;
+  line-height: var(--line-height-300);
+  text-decoration: none;
+  width: fit-content;
+  transition: opacity 0.15s ease;
+}
+
+.category-card .btn-category:hover {
+  opacity: 0.85;
+}
+
+/* Quick Wins — lime */
+.category-yellow {
+  background-color: var(--color-lime-500);
+}
+
+.category-yellow h3 {
+  color: #0d0d0d;
+}
+.category-yellow p {
+  color: #414c00;
+}
+
+.category-yellow .btn-category {
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+/* Deep Dives — dark */
+.category-dark {
+  background-color: #0d0d0d;
+}
+
+.category-dark h3 {
+  color: #fff;
+}
+.category-dark p {
+  color: #e5e2e1;
+}
+
+.category-dark .btn-category {
+  background-color: #fcf9f8;
+  color: #0d0d0d;
+}
+
+/* Cheat Sheets — purple */
+.category-purple {
+  background-color: var(--color-violet-500);
+}
+
+.category-purple h3 {
+  color: #4b3d7a;
+}
+.category-purple p {
+  color: rgba(75, 61, 122, 0.8);
+}
+
+.category-purple .btn-category {
+  background-color: #0d0d0d;
+  color: #fff;
+}
