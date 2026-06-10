@@ -739,3 +739,9 @@ body {
 .card-link:hover {
   opacity: 0.7;
 }
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
