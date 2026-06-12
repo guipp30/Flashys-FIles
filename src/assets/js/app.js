@@ -1,4 +1,13 @@
 (function () {
+  var navToggle = document.querySelector(".nav-toggle");
+  var navLinks = document.querySelector(".nav-links");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
   var tabs = document.querySelectorAll(".filter-tabs button");
   var cards = document.querySelectorAll("#articles-grid .article-card");
   var search = document.getElementById("articles-search");
