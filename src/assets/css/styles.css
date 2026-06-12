@@ -1750,7 +1750,7 @@ main.article-page.cheat-sheet::before {
 .star {
   display: block;
   font-size: 1.25rem;
-  color: var(--color-lime-500);
+  color: var(--color-violet-500);
   line-height: 1;
 }
 
