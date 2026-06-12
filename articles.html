@@ -20,21 +20,21 @@
     >
       <path
         d="M16 8V24"
-        stroke="#DFFE00"
+        stroke="#993723"
         stroke-width="2.66667"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M22.9278 12L9.07178 20"
-        stroke="#DFFE00"
+        stroke="#993723"
         stroke-width="2.66667"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M9.07178 12L22.9278 20"
-        stroke="#DFFE00"
+        stroke="#993723"
         stroke-width="2.66667"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -46,11 +46,10 @@
     <li><a href="../articles.html" class="nav-link">Articles</a></li>
     <li><a href="../contact.html" class="nav-link">Connect</a></li>
   </ul>
-  <a href="#" class="btn-nav">Register/Login</a>
 </nav>
 </header>
 
-    <main>
+    <main class="articles-page">
       <!-- DARK HERO BANNER -->
       <section class="articles-hero">
         <span class="tag">47 RESOURCES</span>
@@ -61,19 +60,23 @@
       <!-- SEARCH + FILTERS -->
       <section class="articles-filter">
         <div class="search-bar">
-          <input type="text" placeholder="Search tips..." />
+          <input
+            type="text"
+            id="articles-search"
+            placeholder="Search tips..."
+          />
         </div>
         <div class="filter-tabs">
-          <button class="active">All</button>
-          <button>Quick Win</button>
-          <button>Deep Dives</button>
-          <button>Cheat Sheets</button>
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="quick-win">Quick Win</button>
+          <button data-filter="deep-dive">Deep Dives</button>
+          <button data-filter="cheat-sheet">Cheat Sheets</button>
         </div>
       </section>
 
       <!-- ARTICLE CARDS GRID -->
-      <section class="articles-grid">
-        <article class="article-card">
+      <section class="articles-grid" id="articles-grid">
+        <article class="article-card" data-category="quick-win">
           <span class="tag tag-yellow">QUICK WIN</span>
           <h3>The 3-Click Figma Component Swap</h3>
           <p>
@@ -82,10 +85,10 @@
           </p>
           <div class="card-meta">
             <span>2 min read</span>
-            <a href="../articles/3-Click-Figma.html">Read More →</a>
+            <a href="../articles/3-clickFigmaComponent.html">Read More →</a>
           </div>
         </article>
-        <article class="article-card">
+        <article class="article-card" data-category="deep-dive">
           <span class="tag tag-red">DEEP DIVE</span>
           <h3>Building a Design Token System from Scratch</h3>
           <p>
@@ -97,7 +100,7 @@
             <a href="../articles/building-design-system.html">Read More →</a>
           </div>
         </article>
-        <article class="article-card">
+        <article class="article-card" data-category="cheat-sheet">
           <span class="tag tag-purple">CHEAT SHEET</span>
           <h3>The 12 Font Pairings That Always Work</h3>
           <p>
@@ -106,13 +109,12 @@
           </p>
           <div class="card-meta">
             <span>5 min read</span>
-            <a href="../articles/12-Font-Pairings.html">Read More →</a>
+            <a href="../articles/12-fontPairings.html">Read More →</a>
           </div>
         </article>
-        <!-- Repeat pattern for remaining 6 cards -->
       </section>
 
-      <div class="load-more">
+      <div class="load-more" style="display: none">
         <a href="#" class="btn btn-dark">Load More Tips →</a>
       </div>
     </main>

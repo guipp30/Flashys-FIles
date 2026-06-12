@@ -52,17 +52,17 @@
     <main class="article-page">
       <!-- BREADCRUMB -->
       <div class="breadcrumb">
-        <span class="tag tag-red">DEEP DIVE</span>
-        <span>12 MIN READ</span>
+        <span class="tag tag-red-light">DEEP DIVE</span>
+        <span class="read-time-badge">8 MIN READ</span>
       </div>
 
       <!-- ARTICLE TITLE + AUTHOR -->
-      <h1>Building a Design Token System from Scratch</h1>
+      <h1>The 12 Font Pairings That Always Work</h1>
       <div class="article-author">
-        <img src="../assets/img/author.jpg" alt="Flashy" class="avatar" />
-        <div>
-          <p><strong>By Flashy</strong></p>
-          <p>Published April 15, 2026</p>
+        <img src="../assets/img/gui.avif" alt="Guilherme" class="avatar" />
+        <div class="article-author-info">
+          <p class="author-name">By Guilherme</p>
+          <p class="author-date">Published June 12, 2026</p>
         </div>
       </div>
 
@@ -71,95 +71,187 @@
         <!-- MAIN CONTENT COLUMN -->
         <article class="article-content">
           <blockquote class="intro-quote">
-            Design tokens are the atomic elements of your product's visual
-            identity. Here is the step-by-step framework to transition from
-            hard-coded hex values to a bulletproof token architecture that
-            engineers will actually love using.
+            Typography is 95% of design. These 12 editorial pairings have been
+            battle-tested across modern SaaS dashboards, e-commerce storefronts,
+            and marketing sites — each one downloadable as a ready-to-use Figma
+            style reference.
           </blockquote>
 
-          <h2>1. Naming Conventions</h2>
+          <h2 id="1-saasAndDashboards">1. SaaS & Dashboards</h2>
           <p>
-            The biggest mistake teams make is jumping straight into semantic
-            tokens without defining the global scale first. Start with a neutral
-            palette and establish a clear naming framework. We recommend the
-            Category-Property-Concept-State format.
+            SaaS interfaces demand clarity above all else. A geometric
+            sans-serif for headings paired with a humanist sans for body copy
+            creates the right balance of authority and readability. These three
+            pairings are used in some of the most recognisable B2B products on
+            the market.
           </p>
 
-          <pre><code>/* Global tokens */
---color-blue-lower: #1B4B8;
---global-color-blue-800: #282948;
-/* ... */</code></pre>
+          <pre class="code-block"><code>/* Pairing 01 — Inter + Inter */
+--font-heading: 'Inter', sans-serif;   /* weight 700, tracking -0.02em */
+--font-body:    'Inter', sans-serif;   /* weight 400, tracking  0.00em */
 
-          <h2>2. Structuring the Figma File</h2>
+/* Pairing 02 — Sora + DM Sans */
+--font-heading: 'Sora', sans-serif;    /* weight 600, tracking -0.01em */
+--font-body:    'DM Sans', sans-serif; /* weight 400, tracking  0.01em */
+
+/* Pairing 03 — Plus Jakarta Sans + Manrope */
+--font-heading: 'Plus Jakarta Sans', sans-serif; /* weight 700 */
+--font-body:    'Manrope', sans-serif;            /* weight 400 */</code></pre>
+
+          <h2 id="2-ecommerceAndRetail">2. E-commerce & Retail</h2>
           <p>
-            Keep your tokens isolated from your component library. Create a
-            dedicated 'Foundations' file that publishes exclusively styles and
-            variables.
+            E-commerce sites live or die on trust and desire. A high-contrast
+            serif headline evokes premium editorial energy, while a clean sans
+            keeps product descriptions scannable. These pairings scale from
+            independent boutiques up to global retail brands.
           </p>
+
+          <pre
+            class="code-block"
+          ><code>/* Pairing 04 — Playfair Display + Lato */
+--font-heading: 'Playfair Display', serif; /* weight 700, tracking -0.02em */
+--font-body:    'Lato', sans-serif;        /* weight 400 */
+
+/* Pairing 05 — Cormorant Garamond + Source Sans 3 */
+--font-heading: 'Cormorant Garamond', serif; /* weight 600, tracking 0.03em */
+--font-body:    'Source Sans 3', sans-serif; /* weight 400 */
+
+/* Pairing 06 — Fraunces + Nunito Sans */
+--font-heading: 'Fraunces', serif;       /* weight 700, optical-size 72 */
+--font-body:    'Nunito Sans', sans-serif; /* weight 400 */</code></pre>
 
           <div class="video-embed">
-            <img src="../assets/img/video-thumb.jpg" alt="Video thumbnail" />
+            <img
+              src="../assets/img/video-thumb.jpg"
+              alt="Font pairing preview"
+            />
           </div>
 
-          <h2>3. Handling Dark Mode</h2>
+          <h2 id="3-marketingAndLanding">3. Marketing & Landing Pages</h2>
           <p>
-            Dark mode should never require duplicating components. By mapping
-            light and dark themes to the same semantic token names, the switch
-            happens automatically at the variable level.
+            Marketing pages need to arrest attention in seconds. A display or
+            variable font for the hero headline creates a strong visual
+            identity, while the body copy stays neutral enough not to compete.
+            These pairings are optimised for above-the-fold impact.
           </p>
 
+          <pre
+            class="code-block"
+          ><code>/* Pairing 07 — Cabinet Grotesk + Satoshi */
+--font-heading: 'Cabinet Grotesk', sans-serif; /* weight 800, tracking -0.03em */
+--font-body:    'Satoshi', sans-serif;          /* weight 400 */
+
+/* Pairing 08 — Clash Display + General Sans */
+--font-heading: 'Clash Display', sans-serif;  /* weight 600, tracking -0.02em */
+--font-body:    'General Sans', sans-serif;   /* weight 400 */
+
+/* Pairing 09 — Unbounded + Space Grotesk */
+--font-heading: 'Unbounded', sans-serif;      /* weight 700, tracking -0.01em */
+--font-body:    'Space Grotesk', sans-serif;  /* weight 400 */</code></pre>
+
           <blockquote class="pull-quote">
-            "A token system isn't finished when it works in Figma. It's finished
-            when a developer can build a new feature without ever sampling a
-            color."
+            "The best font pairing is the one where the reader never notices the
+            typography — they just feel comfortable and in the right place."
           </blockquote>
 
+          <h2 id="4-editorialAndBlog">4. Editorial & Blog</h2>
           <p>
-            Take the time to align your variable collections with your
-            codebase's theme provider. The initial setup takes hours, but it
-            saves weeks of back-and-forth pixel pushing.
+            Long-form reading requires pairings that sustain attention across
+            thousands of words. Opt for fonts with generous x-heights, open
+            counters, and subtle optical corrections. These three pairings are
+            engineered for readability at 16–18px body size.
+          </p>
+
+          <pre
+            class="code-block"
+          ><code>/* Pairing 10 — Merriweather + Open Sans */
+--font-heading: 'Merriweather', serif;  /* weight 700, tracking -0.01em */
+--font-body:    'Open Sans', sans-serif; /* weight 400, line-height 1.75 */
+
+/* Pairing 11 — Libre Baskerville + Libre Franklin */
+--font-heading: 'Libre Baskerville', serif; /* weight 700 */
+--font-body:    'Libre Franklin', sans-serif; /* weight 400, line-height 1.7 */
+
+/* Pairing 12 — Lora + Mulish */
+--font-heading: 'Lora', serif;    /* weight 600, tracking 0.01em */
+--font-body:    'Mulish', sans-serif; /* weight 400, line-height 1.8 */</code></pre>
+
+          <p>
+            Every pairing above is available on Google Fonts at no cost. For
+            variable font versions — which let you fine-tune weight and optical
+            size as a single file — check the Fontshare and Fonts In Use
+            libraries. Always load only the weights you actually use to keep
+            page load times under 100ms.
           </p>
 
           <div class="article-tags">
+            <span>Typography</span>
             <span>Figma</span>
-            <span>PostScript</span>
-            <span>Fonction</span>
-            <span>InDesign Admin</span>
+            <span>SaaS</span>
+            <span>E-commerce</span>
           </div>
 
           <!-- CTA BANNER -->
           <div class="article-cta">
             <h3>Found this useful?</h3>
             <p>Got a workflow hack of your own? Share it with the community.</p>
-            <a href="../contato.html" class="btn btn-light">SUGGEST A TIP →</a>
+            <a href="../contact.html" class="btn btn-light">SUGGEST A TIP →</a>
           </div>
         </article>
 
         <!-- SIDEBAR -->
         <aside class="article-sidebar">
+          <!-- TOC Widget -->
           <div class="sidebar-widget">
-            <h4>Article Guide</h4>
+            <h4 class="sidebar-title">Article Guide</h4>
             <p class="sidebar-label">Quick Navigation</p>
             <nav class="toc">
-              <a href="#" class="toc-active">Table of Contents</a>
-              <a href="#">Pro Tips</a>
-              <a href="#">Resources</a>
-              <a href="#">Share</a>
+              <a href="#1-saasAndDashboards" class="toc-active"
+                >SaaS & Dashboards</a
+              >
+              <a href="#2-ecommerceAndRetail" class="toc-link"
+                >E-commerce & Retail</a
+              >
+              <a href="#3-marketingAndLanding" class="toc-link"
+                >Marketing & Landing Pages</a
+              >
+              <a href="#4-editorialAndBlog" class="toc-link"
+                >Editorial & Blog</a
+              >
             </nav>
           </div>
-          <div class="sidebar-widget sidebar-tip">
-            <span>💡 Pro Tip</span>
+
+          <!-- Pro Tip Callout -->
+          <div class="sidebar-tip">
+            <div class="sidebar-tip-label">
+              <span>PRO TIP</span>
+            </div>
             <p>
-              Never use the 'to-grid' inside components. Never let it do the
-              macro layout to avoid a cluttered 'Spreadsheets' look.
+              Keep your type scale to a maximum of two typefaces per project.
+              Add contrast through weight and size, not by piling on more font
+              families.
             </p>
           </div>
-          <div class="sidebar-widget">
-            <p class="sidebar-label">Related Resources</p>
-            <a href="#">The 12 Font Pairings That Always Work</a><br />
-            <a href="#">Read Here →</a>
-            <a href="#">Auto Layout Shortcuts That Save 30 Min/Day</a><br />
-            <a href="#">Read More →</a>
+
+          <!-- Related Resources -->
+          <div class="sidebar-related">
+            <p class="sidebar-label sidebar-label--spaced">RELATED RESOURCES</p>
+            <a
+              href="../articles/building-design-system.html"
+              class="related-card"
+            >
+              <p class="related-card-title">
+                Building a Design Token System from Scratch
+              </p>
+              <span class="related-card-link">Read More →</span>
+            </a>
+            <a
+              href="../articles/3-clickFigmaComponent.html"
+              class="related-card"
+            >
+              <p class="related-card-title">The 3-Click Figma Component Swap</p>
+              <span class="related-card-link">Read More →</span>
+            </a>
           </div>
         </aside>
       </div>

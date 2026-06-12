@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <!-- @import "../head" -->
+  <body>
+    <!-- @import "../header" -->
+
+    <main class="article-page quick-win">
+      <!-- BREADCRUMB -->
+      <div class="breadcrumb">
+        <span class="tag tag-yellow-light">QUICK WIN</span>
+        <span class="read-time-badge">5 MIN READ</span>
+      </div>
+
+      <!-- ARTICLE TITLE + AUTHOR -->
+      <h1>The 3-Click Figma Component Swap</h1>
+      <div class="article-author">
+        <img src="../assets/img/gui.avif" alt="Gui" class="avatar" />
+        <div class="article-author-info">
+          <p class="author-name">By Guilherme</p>
+          <p class="author-date">Published June 12, 2026</p>
+        </div>
+      </div>
+
+      <!-- TWO-COLUMN LAYOUT -->
+      <div class="article-layout">
+        <!-- MAIN CONTENT COLUMN -->
+        <article class="article-content">
+          <blockquote class="intro-quote">
+            Stop manually detaching instances. This keyboard shortcut swaps
+            components globally without breaking auto-layout — and it works
+            across frames, pages, and nested groups.
+          </blockquote>
+
+          <h2 id="1-selectYourInstance">1. Select Your Instance</h2>
+          <p>
+            Click any component instance on your canvas. You don't need to enter
+            the group or select individual layers — the top-level instance is
+            all you need. Hold <strong>Cmd</strong> (Mac) or
+            <strong>Ctrl</strong> (Windows) if you want to multi-select
+            instances of different variants at once.
+          </p>
+
+          <pre class="code-block"><code>/* Keyboard shortcut */
+Right-click → "Swap component" (or)
+Right Panel → Component → Swap icon ⇄</code></pre>
+
+          <h2 id="2-openTheSwapPanel">2. Open the Swap Panel</h2>
+          <p>
+            With the instance selected, look at the right panel under the
+            component header. Click the <strong>swap icon (⇄)</strong> next to
+            the component name. This opens a searchable picker showing every
+            component in your local file and any published libraries you have
+            enabled.
+          </p>
+
+          <div class="video-embed">
+            <img
+              src="../assets/img/video-thumb.jpg"
+              alt="Component swap demo"
+            />
+          </div>
+
+          <h2 id="3-pickAndConfirm">3. Pick and Confirm</h2>
+          <p>
+            Type to filter, hover to preview, then click to swap. Figma
+            intelligently maps matching property names — so if both components
+            share a <code>size</code> or <code>state</code> property, those
+            values carry over automatically. Auto-layout constraints and spacing
+            are preserved throughout.
+          </p>
+
+          <blockquote class="pull-quote">
+            "The swap panel isn't just a time-saver — it's the cleanest way to
+            A/B test component variants across an entire flow without touching a
+            single override."
+          </blockquote>
+
+          <p>
+            This also works in bulk: select multiple mismatched instances, open
+            the swap panel, and Figma will replace all of them with your chosen
+            component in one shot. No detaching, no re-applying styles, no
+            broken constraints.
+          </p>
+
+          <div class="article-tags">
+            <span>Figma</span>
+            <span>Components</span>
+            <span>Auto Layout</span>
+            <span>Workflow</span>
+          </div>
+
+          <!-- CTA BANNER -->
+          <div class="article-cta">
+            <h3>Found this useful?</h3>
+            <p>Got a workflow hack of your own? Share it with the community.</p>
+            <a href="../contact.html" class="btn btn-light">SUGGEST A TIP →</a>
+          </div>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="article-sidebar">
+          <!-- TOC Widget -->
+          <div class="sidebar-widget">
+            <h4 class="sidebar-title">Article Guide</h4>
+            <p class="sidebar-label">Quick Navigation</p>
+            <nav class="toc">
+              <a href="#1-selectYourInstance" class="toc-active"
+                >Select Your Instance</a
+              >
+              <a href="#2-openTheSwapPanel" class="toc-link"
+                >Open the Swap Panel</a
+              >
+              <a href="#3-pickAndConfirm" class="toc-link">Pick and Confirm</a>
+            </nav>
+          </div>
+
+          <!-- Pro Tip Callout -->
+          <div class="sidebar-tip">
+            <div class="sidebar-tip-label">
+              <span>PRO TIP</span>
+            </div>
+            <p>
+              Hold <strong>Option</strong> (Mac) or <strong>Alt</strong>
+              (Windows) while swapping to keep all overrides — text, colours,
+              and nested instances — intact on the new component.
+            </p>
+          </div>
+
+          <!-- Related Resources -->
+          <div class="sidebar-related">
+            <p class="sidebar-label sidebar-label--spaced">RELATED RESOURCES</p>
+            <a
+              href="../articles/building-design-system.html"
+              class="related-card"
+            >
+              <p class="related-card-title">
+                Building a Design Token System from Scratch
+              </p>
+              <span class="related-card-link">Read More →</span>
+            </a>
+            <a href="../articles/12-Font-Pairings.html" class="related-card">
+              <p class="related-card-title">
+                The 12 Font Pairings That Always Work
+              </p>
+              <span class="related-card-link">Read More →</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+      <!-- end .article-layout -->
+    </main>
+
+    <!-- @import "../footer" -->
+  </body>
+</html>
