@@ -366,6 +366,7 @@ main {
 
 .nav-link--active {
   color: #0d0d0d;
+  font-weight: var(--font-weight-bold);
 }
 
 .btn-nav {
