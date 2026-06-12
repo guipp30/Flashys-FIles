@@ -1992,6 +1992,86 @@ main.article-page.cheat-sheet::before {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   ANIMATIONS — @keyframes
+═══════════════════════════════════════════════════════════ */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBob {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--card-rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--card-rotate, 0deg));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero content fades in on load */
+.hero-content {
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+.hero-content .tag {
+  animation-delay: 0.05s;
+}
+
+/* Hero visual fades in slightly after */
+.hero-visual {
+  animation: fadeIn 0.9s ease 0.3s both;
+}
+
+/* Floating cards bob continuously */
+.float-card--white {
+  --card-rotate: -5deg;
+  animation: floatBob 4s ease-in-out 0s infinite;
+}
+
+.float-card--dark {
+  --card-rotate: 3deg;
+  animation: floatBob 4s ease-in-out 0.8s infinite;
+}
+
+.float-card--purple {
+  --card-rotate: -2deg;
+  animation: floatBob 4s ease-in-out 1.6s infinite;
+}
+
+/* Article and category cards fade in */
+.article-card,
+.category-card {
+  animation: fadeIn 0.5s ease both;
+}
+
+.article-card:nth-child(2),
+.category-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.article-card:nth-child(3),
+.category-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* ═══════════════════════════════════════════════════════════
    RESPONSIVE
    Tablet  ≤ 1024px  |  Mobile  ≤ 640px
 ═══════════════════════════════════════════════════════════ */
@@ -2205,6 +2285,10 @@ main.article-page.cheat-sheet::before {
   /* Article template */
   .article-page > h1 {
     font-size: 2rem;
+  }
+
+  .sidebar-widget {
+    display: none;
   }
 
   /* Contact */
